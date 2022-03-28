@@ -56,7 +56,15 @@ const app = new Vue({
             };
            this.toDoThings.push(newTask);
            this.newTask = '';  //azzero il campo di input altrimenti rimarrebbe l'ultima task digitata dall'utente
-                       
+        },
+
+        invertStatus(thing){
+            if(thing.done === true)
+            {
+                thing.done = false;
+            }else{
+                thing.done = true;
+            }
         }
     }
 });
