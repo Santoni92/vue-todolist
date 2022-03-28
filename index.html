@@ -18,7 +18,7 @@
     <div id="todo">
         <h1>To Do List</h1>
         <ul>
-            <li v-for="(thing,index) in toDoThings" v-bind:class="isLineThrough(thing)" @click="deleteToDoThing(index)" v-show="deletedToDoThings.includes(index)"><i class="fa-solid fa-circle-xmark"></i> {{thing.text}}</li>
+            <li v-for="(thing,index) in toDoThings" v-bind:class="isLineThrough(thing)" @click="deleteToDoThing(index)" v-show="!deletedToDoThings.includes(index)"><i class="fa-solid fa-circle-xmark" ></i> {{thing.text}}</li>
         </ul>
 
     </div>

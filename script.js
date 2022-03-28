@@ -21,10 +21,11 @@ const app = new Vue({
                 text:'lavare i piatti',
                 done: true
             }
-        ]
+        ],
+        deletedToDoThings : []    //array dei numeri che rappresentano gli indici dei task già fatti
     },
-     deletedToDoThings : [],    //array dei numeri che rappresentano gli indici dei task già fatti
-    //textThrough: 'text-decoration: line-through;'
+     
+
     methods:{
         isLineThrough(thing){
             if(thing.done === true){
@@ -32,7 +33,7 @@ const app = new Vue({
             }
         },
         deleteToDoThing(index){
-            this.deleteToDoThings.push(index);  /*se l'elemento viene cliccato passo alla funzione l'indice (la posizione)
+            this.deletedToDoThings.push(index);  /*se l'elemento viene cliccato passo alla funzione l'indice (la posizione)
                                                  dell'oggetto thing nell'array toDoThings*/
         }
     }
