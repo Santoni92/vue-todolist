@@ -22,5 +22,13 @@ const app = new Vue({
                 done:true
             }
         ]
+    },
+    //textThrough: 'text-decoration: line-through;'
+    methods:{
+        isLineThrough(){
+            if(this.done === true){
+                return '.barrato';
+            }
+        }
     }
 });
