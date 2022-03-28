@@ -26,7 +26,7 @@ const app = new Vue({
     //textThrough: 'text-decoration: line-through;'
     methods:{
         isLineThrough(thing){
-            if(this.done === true){
+            if(thing.done === true){
                 return 'barrato';
             }
         }
