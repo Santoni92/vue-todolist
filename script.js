@@ -23,12 +23,17 @@ const app = new Vue({
             }
         ]
     },
+     deletedToDoThings : [],    //array dei numeri che rappresentano gli indici dei task già fatti
     //textThrough: 'text-decoration: line-through;'
     methods:{
         isLineThrough(thing){
             if(thing.done === true){
                 return 'barrato';
             }
+        },
+        deleteToDoThing(index){
+            this.deleteToDoThings.push(index);  /*se l'elemento viene cliccato passo alla funzione l'indice (la posizione)
+                                                 dell'oggetto thing nell'array toDoThings*/
         }
     }
 });
