@@ -21,6 +21,9 @@
             <li v-for="(thing,index) in toDoThings" v-bind:class="isLineThrough(thing)" @click="deleteToDoThing(index)" v-show="!deletedToDoThings.includes(index)"><i class="fa-solid fa-circle-xmark" ></i> {{thing.text}}</li>
         </ul>
 
+        <input type="text">
+        <button>Aggiungi Task</button>
+
     </div>
 </body>
 </html>
