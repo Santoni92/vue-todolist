@@ -16,7 +16,7 @@
     <div id="todo">
         <h1>To Do List</h1>
         <ul>
-            <li v-for="thing in toDoThings" v-bind:class="isLineThrough">{{thing.text}}</li>
+            <li v-for="thing in toDoThings" v-bind:class="isLineThrough(thing)">{{thing.text}}</li>
         </ul>
 
     </div>
