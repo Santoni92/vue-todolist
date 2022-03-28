@@ -18,7 +18,7 @@
     <div id="todo">
         <h1>To Do List</h1>
         <ul>
-            <li v-for="(thing,index) in toDoThings" v-bind:class="isLineThrough(thing)" @click="deleteToDoThing(index)" v-show="!deletedToDoThings.includes(index)"><i class="fa-solid fa-circle-xmark" ></i> {{thing.text}}</li>
+            <li v-for="(thing,index) in toDoThings" v-bind:class="isLineThrough(thing)"  v-show="!deletedToDoThings.includes(index)"><i class="fa-solid fa-circle-xmark" @click="deleteToDoThing(index)" ></i> {{thing.text}}</li>
         </ul>
 
         <input type="text"  placeholder="Inserire nuova task" v-model="newTask" @keyup.enter="addTask">   <!--v-model è una direttiva che permette di associare in maniera bidirezionale un modello dati (in questo caso la variabile 'newTask') ad un campo di una form-->
