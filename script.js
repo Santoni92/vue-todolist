@@ -6,20 +6,20 @@ const app = new Vue({
         toDoThings : [  //array di oggetti che rappresentano le cose (i task) da fare e se quella determinata cosa è stata fatta oppure no
             {
                 text:'giocare',
-                done:true
+                done: true
 
             },
             {
                 text: 'studiare',
-                done:false
+                done: false
             },
             {
                 text: 'portare a passeggio il cane',
-                done : false
+                done: false
             },
             {
                 text:'lavare i piatti',
-                done:true
+                done: true
             }
         ]
     },
@@ -27,7 +27,7 @@ const app = new Vue({
     methods:{
         isLineThrough(){
             if(this.done === true){
-                return '.barrato';
+                return 'barrato';
             }
         }
     }
