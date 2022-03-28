@@ -21,7 +21,7 @@
             <li v-for="(thing,index) in toDoThings" v-bind:class="isLineThrough(thing)" @click="deleteToDoThing(index)" v-show="!deletedToDoThings.includes(index)"><i class="fa-solid fa-circle-xmark" ></i> {{thing.text}}</li>
         </ul>
 
-        <input type="text" v-model="newTask">   <!--v-model è una direttiva che permette di associare in maniera bidirezionale un modello dati (in questo caso la variabile 'newTask') ad un campo di una form-->
+        <input type="text"  placeholder="Inserire nuova task" v-model="newTask" @keyup.enter="addTask">   <!--v-model è una direttiva che permette di associare in maniera bidirezionale un modello dati (in questo caso la variabile 'newTask') ad un campo di una form-->
         <button @click="addTask">Aggiungi Task</button>
 
     </div>

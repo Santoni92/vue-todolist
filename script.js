@@ -42,15 +42,21 @@ const app = new Vue({
 
         addTask(){
             const text = this.newTask.trim();  //elimino eventuali spazi aggiunti dall'utente prima e dopo alla stringa in input; notare che con this.newTask mi sto riferendo alla stringa presente in data
-            //if(newTask.lenght > 0){ //verifico che l'utente non abbia inserito una stringa vuota
-               // this.toDoThings.push(newTask);
-                //this.newTask = '';  //azzero il campo di input altrimenti rimarrebbe l'ultima task digitata dall'utente
-           // }
-            const newTask = {
+            /*if(text.lenght > 0){ //verifico che l'utente non abbia inserito una stringa vuota
+                const newTask = {
+                    text,
+                    done:false
+                };
+               this.toDoThings.push(newTask);
+               this.newTask = '';  //azzero il campo di input altrimenti rimarrebbe l'ultima task digitata dall'utente
+             }*/
+             const newTask = {
                 text,
                 done:false
             };
            this.toDoThings.push(newTask);
+           this.newTask = '';  //azzero il campo di input altrimenti rimarrebbe l'ultima task digitata dall'utente
+                       
         }
     }
 });
